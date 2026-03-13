@@ -6,16 +6,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <title>Formulario login y register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wave-container">
     <div class="wave"></div>
     <div class="wave"></div>
-    <div class="wave"></div>
+    <div class="wave"></div> </div>
 
-</div>
     <main> <section class="container-form register">
             <aside class="information"> <h2>Bienvenido</h2>
                 <p>Para unirte a nuestra comunidad por favor <strong>Inicia Sesión</strong> con tus datos</p>
@@ -27,24 +26,21 @@
                     <p>usa tu email para registrarte</p>
                 </header>
 
-                <form class="form form-register" novalidate>
+                <form class="form form-register">
                     <div class="form-group">
                         <label for="reg-user"><i class='bx bx-user'></i> Nombre Usuario</label>
-                        <input type="text" id="reg-user" name="userName" placeholder="Ej. JuanPerez">
+                        <input type="text" id="reg-user" class=".form-control" placeholder="Ej. JuanPerez" required>
                     </div>
                     <div class="form-group">
                         <label for="reg-email"><i class='bx bx-envelope'></i> Correo Electrónico</label>
-                        <input type="email" id="reg-email" name="userEmail" placeholder="correo@ejemplo.com">
+                        <input type="email" id="reg-email" name="userEmail" class=".form-control" placeholder="correo@ejemplo.com" required>
                     </div>
                     <div class="form-group">
                         <label for="reg-pass"><i class='bx bx-lock-alt'></i> Contraseña</label>
-                        <input type="password" id="reg-pass" name="userPassword" placeholder="Tu contraseña">
+                        <input type="password" id="reg-pass" name="userPassword" class=".form-control" placeholder="Tu contraseña" required>
                     </div>
                     
                     <button type="submit">Registrarse</button>
-
-                    <p class="alerta-error" role="alert">Todos los campos son obligatorios</p>
-                    <p class="alerta-exito" role="status">Te registraste correctamente</p>
                 </form>
             </div>
         </section>
@@ -62,26 +58,22 @@
                     <p>o Iniciar Sesión con una cuenta</p>
                 </header>
 
-                <form class="form form-login" novalidate>
+                <form class="form form-login " id="login-f">
                     <div class="form-group">
                         <label for="log-email"><i class='bx bx-envelope'></i> Correo Electrónico</label>
-                        <input type="email" id="log-email" name="userEmail" placeholder="correo@ejemplo.com">
+                        <input type="email" id="log-email" name="userEmail" placeholder="correo@ejemplo.com" required>
                     </div>
                     <div class="form-group">
                         <label for="log-pass"><i class='bx bx-lock-alt'></i> Contraseña</label>
-                        <input type="password" id="log-pass" name="userPassword" placeholder="Tu contraseña">
+                        <input type="password" id="log-pass" name="userPassword" placeholder="Tu contraseña" required>
                     </div>
-                    
                     <button type="submit">Iniciar Sesión</button>
-
-                    <p class="alerta-error" role="alert">Todos los campos son obligatorios</p>
-                    <p class="alerta-exito" role="status">Iniciaste sesión correctamente</p>
                 </form>
+                <p id="message-log"></p>
             </div>
         </section>
 
     </main>
-
     <script src="js/script.js"></script>
     <script src="js/register.js"></script>
     <script src="js/login.js"></script>
