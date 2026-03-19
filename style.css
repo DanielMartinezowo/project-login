@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
   background: #f0f2f5;
+  position: relative;
 }
 .container-form {
   display: flex;
@@ -44,16 +45,17 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: inset 0px 0px 10px 0 rgba(20, 20, 20, 0.2);
-  padding: 0 30px;         
+  padding: 0 20px;         
 }
 
 .information h2 {
   font-size: 2.5rem;
   color: #333;
+  margin-bottom: 5px;
 }
 
 .information p {
-  margin: 15px 0;
+  margin: 0.5px 0;
   color: #555;
 }
 
@@ -63,12 +65,13 @@ body {
   outline: none;
   border: solid 2px #824FCF;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   color: #824FCF;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   transition: all .3s ease;
+  margin-top: 5px;
 }
 
 .information button:hover {
@@ -92,9 +95,11 @@ body {
   padding: 0 30px;       
 }
 
-.form-information header h2 {
+.form-information header h2{
   color: #333;
   font-size: 2rem;
+  margin-bottom: 5%;
+  
 }
 
 .form-information header p {
@@ -129,6 +134,22 @@ body {
   color: #824FCF;
   font-size: 1.1rem;
 }
+.bx-show-alt{
+position: absolute;
+cursor: pointer;
+top: 61.5%;
+right: 20%;
+color: #824FCF;
+font-size: 1.2rem;
+}
+.bx-hide{
+position: absolute;
+cursor: pointer;
+top: 61.5%;
+right: 20%;
+color: #824FCF;
+font-size: 1.2rem;
+}
 
 .form-group input {
   width: 100%;
@@ -141,15 +162,14 @@ body {
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); 
   transition: border-color 0.3s ease;
 }
-.form-group input:valid{
-border: 2px solid red;
-}
-.form-group input:invalid{
-  border: 2px solid green;
+
+/* Solo actúan si el input tiene la clase 'validado' */
+.form-group input.validado:valid {
+    border: 2px solid green;
 }
 
-.form-group input:focus {
-  border-color: #824FCF; 
+.form-group input.validado:invalid {
+    border: 2px solid red;
 }
 
 
@@ -159,7 +179,6 @@ border: 2px solid red;
   border-radius: 20px;
   border: none;
   padding: 12px 15px;
-  cursor: pointer;
   margin-top: 10px;
   width: 100%;
   font-size: 1rem;
@@ -171,6 +190,10 @@ border: 2px solid red;
 .form button[type="submit"]:hover {
   background-color: #CF4F9C;
 }
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  }
 /*seccion del background*/
 .wave-container{
   position: fixed;

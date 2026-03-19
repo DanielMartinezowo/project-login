@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Formulario login y register</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,15 +16,15 @@
     <div class="wave"></div>
     <div class="wave"></div> </div>
 
-    <main> <section class="container-form register">
+    <main> <section class="container-form register hide">
             <aside class="information"> <h2>Bienvenido</h2>
-                <p>Para unirte a nuestra comunidad por favor <strong>Inicia Sesión</strong> con tus datos</p>
+                <p>¿Ya tienes una cuenta? <strong>Inicia Sesión</strong> con tus datos</p>
                 <button type="button" id="sign-in">Iniciar Sesión</button> </aside>
 
             <div class="form-information">
                 <header>
                     <h2>Crear una Cuenta</h2>
-                    <p>usa tu email para registrarte</p>
+                    <p>Usa tu email para registrarte</p>
                 </header>
 
                 <form class="form form-register">
@@ -40,22 +41,24 @@
                         <input type="password" id="reg-pass" name="userPassword" class=".form-control" placeholder="Tu contraseña" required>
                     </div>
                     
-                    <button type="submit">Registrarse</button>
+                    <button type="submit" id="btnEnviaR">Registrarse</button>
                 </form>
             </div>
         </section>
 
-        <section class="container-form login hide">
+        <section class="container-form login">
             <aside class="information">
-                <h2>¡¡Bienvenido de vuelta!!</h2>
-                <p>Para unirte por favor <strong>Inicia Sesión</strong> con tus datos</p>
+                <h2>¡Bienvenido de vuelta!</h2>
+                <p><strong>Inicia Sesión</strong> con tus datos</p>
+                <p>o</p>
+                <p><strong> Haz click </strong> para crear una <strong>cuenta nueva</strong></p>
                 <button type="button" id="sign-up">Registrarse</button>
             </aside>
 
             <div class="form-information">
                 <header>
-                    <h2>Iniciar Sesión</h2>
-                    <p>o Iniciar Sesión con una cuenta</p>
+                    <h2>Inicio de Sesión</h2>
+                    <p>Ingresa tus datos</p>
                 </header>
 
                 <form class="form form-login " id="login-f">
@@ -66,8 +69,10 @@
                     <div class="form-group">
                         <label for="log-pass"><i class='bx bx-lock-alt'></i> Contraseña</label>
                         <input type="password" id="log-pass" name="userPassword" placeholder="Tu contraseña" required>
+                        <i class="bx bx-show-alt"></i>
+                        
                     </div>
-                    <button type="submit">Iniciar Sesión</button>
+                    <button type="submit" id="btnEnviarL" disabled>Iniciar Sesión</button>
                 </form>
                 <p id="message-log"></p>
             </div>
